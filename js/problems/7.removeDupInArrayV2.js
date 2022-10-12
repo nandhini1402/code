@@ -8,12 +8,10 @@ function removeDup(arr) {
   for (var i = 0; i < arr.length; i++) {
     var pushflag = 1;
 
-    for (var j = 0; j < arr.length; j++) {
-      if (i !== j) {
-        if (arr[i] === arr[j]) {
-          pushflag = 0;
-          break;
-        }
+    for (var j = 0; j < finalArr.length; j++) {
+      if (arr[i] === finalArr[j]) {
+        pushflag = 0;
+        break;
       }
     }
 
@@ -25,8 +23,8 @@ function removeDup(arr) {
   return finalArr;
 }
 
-// var arr = [1, 1, 2, 3, 3, 4, 5, 6, 5];
+var arr = [1, 1, 2, 3, 3, 4, 5, 6, 5];
 
-// console.log(removeDup(arr));
+console.log(removeDup(arr));
 
 export default removeDup;
